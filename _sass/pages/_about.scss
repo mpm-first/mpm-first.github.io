@@ -1,0 +1,28 @@
+#about {
+
+  .made-in-ny {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .owner {
+    margin-top: 3rem;
+
+    .byline {
+
+      figure {
+        width: 128px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  
+}

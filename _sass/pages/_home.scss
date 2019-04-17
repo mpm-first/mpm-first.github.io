@@ -1,0 +1,46 @@
+#home {
+
+  #landing {
+    margin-top: 0;
+
+    .video-anchor {
+      display: inline-block;
+      margin-top: 2rem;
+      height: 32px;
+      line-height: 32px;
+      font-family: $header-font-family;
+      vertical-align: middle;
+
+      svg, span {
+        display: inline-block;
+        float: left;
+      }
+
+      span {
+        padding-left: 1em;
+        font-weight: bold;
+        letter-spacing: .06em;
+      }
+    }
+  }
+
+  #work {
+    text-align: center;
+
+    .subheading {
+      max-width: 100%;
+    }
+
+    #ascyrus {
+      background: url('../img/clients/ascyrus/homepage-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+    }
+  }
+  
+  #connect {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}

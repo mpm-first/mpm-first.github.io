@@ -1,0 +1,51 @@
+$san-serif: forma-djr-text;
+$serif: pt-serif;
+$serif-caption: pt-serif-caption;
+
+@mixin font-san-serif {
+    font-family: $san-serif,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-san-serif-bold {
+    font-family: $san-serif,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin font-serif {
+    font-family: $serif,serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-serif-italic {
+    font-family: $serif,serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin font-serif-bold {
+    font-family: $serif,serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin font-serif-bold-italic {
+    font-family: $serif,serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin font-caption {
+    font-family: $serif-caption,serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-caption-italic {
+    font-family: $serif-caption,serif;
+    font-weight: 400;
+    font-style: italic;
+}

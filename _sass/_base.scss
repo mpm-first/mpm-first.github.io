@@ -1,0 +1,46 @@
+.panel {
+  position: relative;
+  min-height: 600px;
+  // min-height: 100vh;
+
+  > .alignment {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+#landing {
+  margin-top: 30vh;
+}
+
+.heading {
+  font-size: 3em;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.subheading {
+  font-size: 1.5em;
+  color: $secondary-color;
+  // max-width: 75%;
+}
+
+.caret-anchor {
+  font-weight: bold;
+  font-family: $header-font-family;
+  color: $primary-color;
+
+  &:after {
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid $color-four;
+    @include rotate(90);
+  }
+}

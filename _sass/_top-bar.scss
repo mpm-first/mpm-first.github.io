@@ -1,0 +1,41 @@
+.logo {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  display: block;
+  z-index: 999;
+
+  img {
+    display: block;
+    max-height: 24px;
+    width: auto;
+  }
+}
+
+.burger {
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+  z-index: 999;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+
+  .open { display: inline-block; }
+  .close { display: none; }
+}
+
+body.bottom {
+  .burger {
+    display: none;
+  }
+}
+
+body.opened {
+  padding-bottom: 100vh;
+
+  .burger {
+    .open { display: none; }
+    .close { display: inline-block; }
+  }
+}
