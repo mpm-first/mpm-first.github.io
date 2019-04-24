@@ -1,7 +1,7 @@
 .panel {
   position: relative;
-  min-height: 600px;
-  // min-height: 100vh;
+  // min-height: 600px;
+  min-height: 100vh;
 
   > .alignment {
     display: block;
@@ -30,17 +30,21 @@
 }
 
 .caret-anchor {
+  position: relative;
   font-weight: bold;
   font-family: $header-font-family;
   color: $primary-color;
 
   &:after {
     content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
     width: 0; 
-    height: 0; 
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid $color-four;
-    @include rotate(90);
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: $color-five;
+    @include transform(rotate(45deg));
   }
 }

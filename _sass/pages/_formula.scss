@@ -1,3 +1,24 @@
 #formula {
-  
+
+  #landing {
+
+  }
+
+  .stages {
+
+  }
+
+  .components {
+
+    h3 {
+      font-size: 1em;
+      font-family: $header-font-family;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    p {
+      color: $secondary-color;
+    }
+  } 
 }
