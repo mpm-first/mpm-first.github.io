@@ -30,10 +30,13 @@
 }
 
 .caret-anchor {
+  // clear: left;
+  // display: inline-block;
   position: relative;
   font-weight: bold;
   font-family: $header-font-family;
   color: $primary-color;
+  margin-top: 20rem;
 
   &:after {
     content: "";
@@ -41,6 +44,7 @@
     position: absolute;
     bottom: 100%;
     left: 100%;
+    margin-left: 8px;
     width: 0; 
     height: 0;
     border: 8px solid transparent;

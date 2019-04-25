@@ -41,6 +41,13 @@
   
   #connect {
     background-color: $primary-color;
-    color: #fff;
+
+    h2, p {
+      color: #fff;
+    }
+
+    .caret-anchor {
+      color: #fff;
+    }
   }
 }

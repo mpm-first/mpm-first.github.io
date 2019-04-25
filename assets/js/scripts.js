@@ -8,6 +8,7 @@ jQuery(function($) {
     //
     // Toggles the footer to display as
     // a fixed overlay menu
+    //
     $('.burger').click(function(event) {
       event.preventDefault();
       if ($body.hasClass('opened'))
@@ -18,6 +19,7 @@ jQuery(function($) {
     //
     // Hides the burger if we're scrolled near the footer
     // since the footer is our main navigation
+    //
     function burger(event) {
       var scrolled   = $win.scrollTop() + $win.height();
       var til_footer = $doc.height() - $win.height();
@@ -28,6 +30,17 @@ jQuery(function($) {
         return $body.removeClass('bottom');
     }
     $win.on('scroll', burger);
-    // $win.on('load', burger);
+
+    //
+    // Video player
+    //
+    var player = new Plyr('#player', {
+      controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+      debug: true
+    });
+    var $video_anchor = $('#home .video-anchor');
+    $video_anchor.on('click.home', function(event) {
+      player.play();
+    })
 
 });
