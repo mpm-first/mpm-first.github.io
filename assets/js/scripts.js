@@ -34,12 +34,15 @@ jQuery(function($) {
     //
     // Video player
     //
-    var player = new Plyr('#player', {
+    var player_config = {
       controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
       debug: true
-    });
+    };
+    var player = new Plyr('#player', player_config);
     var $video_anchor = $('#home .video-anchor');
+    
     $video_anchor.on('click.home', function(event) {
+      $('#video').show();
       player.play();
     })
 
