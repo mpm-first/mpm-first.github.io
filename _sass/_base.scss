@@ -31,12 +31,12 @@
 
 .caret-anchor {
   // clear: left;
-  // display: inline-block;
+  display: inline-block;
   position: relative;
   font-weight: bold;
   font-family: $header-font-family;
   color: $primary-color;
-  margin-top: 20rem;
+  margin-top: 3em;
 
   &:after {
     content: "";

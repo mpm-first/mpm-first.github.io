@@ -1,7 +1,7 @@
 .logo {
   position: fixed;
-  top: 2vw;
-  left: 2vw;
+  top: 0;
+  left: 0;
   display: block;
   z-index: 999;
 
@@ -9,17 +9,41 @@
     display: block;
     max-height: 24px;
     width: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  &:after {
+    content: "";
+    display: none;
+    width: 100vw;
+    height: 84px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #fff;
+
+    @include breakpoint(large down) {
+      display: block;
+    }
   }
 }
 
 .burger {
   position: fixed;
-  top: 2vw;
-  right: 2vw;
+  top: 0;
+  right: 0;
   z-index: 999;
   padding-top: 0;
   padding-bottom: 0;
   vertical-align: middle;
+
+  svg {
+    display: block;
+    margin-top: 30px;
+    margin-right: 30px;
+  }
 
   .open { display: inline-block; }
   .close { display: none; }
