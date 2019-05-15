@@ -4,8 +4,14 @@
     font-weight: bold;
   }
 
-  // .client-logo {
-  //   margin-top: 3em;
-  //   margin-bottom: 6em;
-  // }
+  .client-logo {
+    @include breakpoint(small) {
+      margin-top: 3em;
+      margin-bottom: 6em;
+    }
+  }
+
+  .caret-anchor {
+    margin-bottom: 4em;
+  }
 }

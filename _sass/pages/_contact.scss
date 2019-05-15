@@ -1,3 +1,23 @@
 #contact {
-  
+
+  .contact-channel {
+    font-family: $header-font-family;
+    color: $header-color;
+    // font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+
+  .contact-address {
+    font-family: $header-font-family;
+
+    a {
+      border-bottom: 1px dotted rgba($primary-color, .15);
+    }
+
+    a {
+      border-bottom-color: rgba($primary-color, .5);
+    }
+  }
 }

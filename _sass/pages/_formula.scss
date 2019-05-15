@@ -1,6 +1,7 @@
 #formula {
 
   #landing {
+
     img {
       width: 229px;
       max-width: 100%;
@@ -9,10 +10,17 @@
       margin-left: auto;
       margin-right: auto;
 
+      @include breakpoint(small) {
+        padding-bottom: 4em;
+      }
     }
   }
 
-  .stages {
+  .stage {
+
+    .heading {
+      padding-top: 1em;
+    }
 
   }
 
@@ -32,6 +40,7 @@
 
     p {
       color: $secondary-color;
+      padding-bottom: 4em;
     }
   } 
 }
