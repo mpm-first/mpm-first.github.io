@@ -29,11 +29,17 @@ title: Home
       <div class="grid-container">
         <div class="grid-x grid-margin-x">
           <div class="cell large-12">
-            <video poster="{{ '/assets/img/marketing-reel-poster.jpg' | relative_url }}" id="player" playsinline controls>
+            <div class="plyr__video-embed" id="player">
+                <iframe
+                    src="https://www.youtube.com/embed/m5geATHyaik?modestbranding=1&amp;origin=https://mpmfirst.com&amp;iv_load_policy=3&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                    allowfullscreen
+                    allowtransparency
+                    allow="autoplay"
+                ></iframe>
+            </div>
+<!--             <video poster="{{ '/assets/img/marketing-reel-poster.jpg' | relative_url }}" id="player" playsinline controls>
               <source src="{{ '/assets/vid/marketing-reel.mp4' | relative_url }}" type="video/mp4" />
-              <!-- <source src="{{ '/assets/vid/marketing-reel.webm' | relative_url }}" type="video/webm" /> -->
-              <!-- <source src="https://cdn.plyr.io/static/blank.mp4" type="video/mp4" /> -->
-            </video>
+            </video> -->
           </div>
         </div>
       </div>
@@ -46,6 +52,7 @@ title: Home
         <div class="grid-container">
           <div class="grid-x grid-margin-x">
             <div class="cell large-6 large-offset-3 medium-8 medium-offset-2 small-10 small-offset-1">
+              <span class="clients">Our Latest Client</span>
               <h2 class="heading">Ascyrus</h2>
               <p class="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <a href="/work/ascyrus" class="caret-anchor">See the case study</a>
@@ -63,7 +70,7 @@ title: Home
           <div class="cell large-7 small-10 small-offset-1 xxlarge-offset-0">
             <h2 class="heading">Ready to partner?</h2>
             <p class="subheading">Learn more about how our marketing services can drive your business forward.</p>
-            <a class="caret-anchor" href="/contact">Contact Us</a>
+            <a class="caret-anchor" href="/calendly">Let's talk</a>
           </div>
         </div>
       </div>

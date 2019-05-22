@@ -22,14 +22,23 @@ $nav-height: 60 / $nav-count;
       font-family: $header-font-family;
       text-transform: uppercase;
 
+      @include breakpoint(medium down) {
+        text-align: center;
+      }
+
       a {
 
         span {
           display: inline-block;
-          clear: right;
+          clear: both;
           float: right;
           position: relative;
           z-index: 1;
+
+          @include breakpoint(medium down) {
+            // clear: left;
+            float: none;
+          }
 
           &:after {
             content: "";
@@ -52,13 +61,18 @@ $nav-height: 60 / $nav-count;
         small {
           position: relative;
           display: inline-block;
-          clear: right;
+          clear: both;
           float: right;
           font-family: $body-font-family;
           color: map-get($foundation-palette, 'secondary');
           font-size: .75em;
           text-transform: none;
           font-weight: normal;
+
+          @include breakpoint(medium down) {
+            // clear: left;
+            float: none;
+          }
         }
       }
     }
