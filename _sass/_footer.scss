@@ -30,15 +30,15 @@ $nav-height: 60 / $nav-count;
 
         span {
           display: inline-block;
-          clear: both;
+          clear: right;
           float: right;
           position: relative;
           z-index: 1;
 
-          @include breakpoint(medium down) {
-            // clear: left;
-            float: none;
-          }
+          // @include breakpoint(medium down) {
+          //   // clear: left;
+          //   float: none;
+          // }
 
           &:after {
             content: "";
@@ -61,7 +61,7 @@ $nav-height: 60 / $nav-count;
         small {
           position: relative;
           display: inline-block;
-          clear: both;
+          clear: right;
           float: right;
           font-family: $body-font-family;
           color: map-get($foundation-palette, 'secondary');
@@ -69,10 +69,10 @@ $nav-height: 60 / $nav-count;
           text-transform: none;
           font-weight: normal;
 
-          @include breakpoint(medium down) {
-            // clear: left;
-            float: none;
-          }
+          // @include breakpoint(medium down) {
+          //   // clear: left;
+          //   float: none;
+          // }
         }
       }
     }
