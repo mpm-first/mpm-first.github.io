@@ -3,4 +3,10 @@
   // @include breakpoint(large down) {
     margin-top: 84px;
   // }
+
+  #landing {
+    @include breakpoint(xlarge down) {
+      padding-top: 0;
+    }
+  }
 }

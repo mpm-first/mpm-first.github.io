@@ -1,5 +1,11 @@
 #contact {
 
+  #landing {
+    @include breakpoint(xlarge down) {
+      padding-top: 0;
+    }
+  }
+
   .contact-channel {
     font-family: $header-font-family;
     color: $header-color;

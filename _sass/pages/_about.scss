@@ -1,5 +1,11 @@
 #about {
 
+  #landing {
+    @include breakpoint(xlarge down) {
+      padding-top: 0;
+    }
+  }
+
   .made-in-ny {
     display: block;
     margin-left: auto;

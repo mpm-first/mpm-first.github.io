@@ -1,7 +1,23 @@
+body {
+
+    @include breakpoint(xlarge down) {
+      padding-top: 80px;
+    }
+
+}
+
 .panel {
   position: relative;
-  // min-height: 600px;
-  min-height: 100vh;
+  height: auto;
+
+  @include breakpoint(xxlarge up) {
+    min-height: 100vh;
+  }
+
+  @include breakpoint(xxlarge down) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   > .alignment {
     display: block;
@@ -10,6 +26,14 @@
     left: 0;
     width: 100%;
     transform: translateY(-50%);
+
+    @include breakpoint(xlarge down) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateY(0%);
+      // border: 10px dashed blue;
+    }
   }
 }
 

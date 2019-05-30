@@ -2,6 +2,10 @@
 
   #landing {
 
+    @include breakpoint(xlarge down) {
+      padding-top: 0;
+    }
+
     img {
       width: 229px;
       max-width: 100%;

@@ -1,5 +1,11 @@
 #work.work {
 
+  #landing {
+    @include breakpoint(xlarge down) {
+      padding-top: 0;
+    }
+  }
+
   h3 {
     font-weight: bold;
   }
