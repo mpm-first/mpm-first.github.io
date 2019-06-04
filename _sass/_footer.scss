@@ -86,6 +86,13 @@ $nav-height: 60 / $nav-count;
     font-size: .9em;
     letter-spacing: .06em;
 
+    .social {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
     a {
       opacity: .5;
       @include transition(opacity .3s);
