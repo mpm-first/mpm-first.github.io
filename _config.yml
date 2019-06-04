@@ -18,7 +18,7 @@ email: info@mpmfirst.com
 description: >- # this means to ignore newlines until "baseurl:"
   Med-tech & Pharmaceutical Marketing
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mpmfirst.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://mpmfirst.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
