@@ -9,10 +9,13 @@
   {% if page.title != "Home" %}
     <title>{{ page.title }} | MPM First</title>
   {% endif %}
-  
+
   {% if page.title == "Home" %}
     <title>MPM First</title>
   {% endif %}
+
+  <link rel="shortcut icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon">
+  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon">
 
   {%- include styles.html -%}
 
