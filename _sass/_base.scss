@@ -76,3 +76,15 @@ body {
     @include transform(rotate(45deg));
   }
 }
+
+#connect {
+  background-color: $primary-color;
+
+  h2, p {
+    color: #fff;
+  }
+
+  .caret-anchor {
+    color: #fff;
+  }
+}

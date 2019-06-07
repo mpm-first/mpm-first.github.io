@@ -3,6 +3,7 @@
   #landing {
     margin-top: 0;
 
+    .talk-anchor,
     .video-anchor {
       display: inline-block;
       margin-top: 2rem;
@@ -21,6 +22,10 @@
         font-weight: bold;
         letter-spacing: .06em;
       }
+    }
+
+    .talk-anchor {
+      margin-left: 3em;
     }
   }
 
@@ -64,18 +69,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top center;
-    }
-  }
-  
-  #connect {
-    background-color: $primary-color;
-
-    h2, p {
-      color: #fff;
-    }
-
-    .caret-anchor {
-      color: #fff;
     }
   }
 }

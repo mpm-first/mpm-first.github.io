@@ -12,12 +12,36 @@ title: Home
           </div>
           <div class="cell large-6 small-9 small-offset-1 xxlarge-offset-0">
             <p class="subheading">We provide digital marketing solutions that help achieve your business goals.</p>
-            <a class="video-anchor" href="#video">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px">
-                <path fill-rule="evenodd"  fill="rgb(96, 187, 70)" d="M16.000,32.000 C7.164,32.000 0.000,24.837 0.000,16.000 C0.000,7.163 7.164,-0.000 16.000,-0.000 C24.836,-0.000 32.000,7.163 32.000,16.000 C32.000,24.837 24.836,32.000 16.000,32.000 ZM11.958,9.031 L11.958,22.972 L24.032,16.001 L11.958,9.031 Z"/>
-              </svg>
-              <span>Watch our video</span>
-            </a>
+            <ul class="menu simple">
+              <li>
+                <a class="video-anchor" href="#video">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path fill-rule="evenodd"  fill="rgb(96, 187, 70)" d="M16.000,32.000 C7.164,32.000 0.000,24.837 0.000,16.000 C0.000,7.163 7.164,-0.000 16.000,-0.000 C24.836,-0.000 32.000,7.163 32.000,16.000 C32.000,24.837 24.836,32.000 16.000,32.000 ZM11.958,9.031 L11.958,22.972 L24.032,16.001 L11.958,9.031 Z"/>
+                  </svg>
+                  <span>Watch our video</span>
+                </a>
+              </li>
+              <li">
+                <a class="talk-anchor" href="#talk" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/michael-499/introductory-call-in'});return false;">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32">
+                    <style type="text/css">
+                      .phone-path{fill:#32C6F4;}
+                    </style>
+                    <g>
+                      <g>
+                        <path fill="rgb(50, 198, 244)" class="phone-path" d="M16,0C7.16,0,0,7.16,0,16c0,8.84,7.16,16,16,16c8.84,0,16-7.16,16-16C32,7.16,24.84,0,16,0z M23.85,21.6
+                          C23,23.64,21.01,24,20.35,24c-0.19,0-3.17,0.16-7.45-3.9c-3.45-3.27-3.87-6.78-3.9-7.45C8.97,12,9.15,10.36,11.4,9.15
+                          c0.28-0.15,0.83-0.22,0.97-0.07c0.06,0.06,1.95,3.16,2,3.27c0.05,0.1,0.07,0.2,0.07,0.3c0,0.14-0.1,0.32-0.3,0.53
+                          c-0.2,0.21-0.42,0.41-0.66,0.58c-0.24,0.18-0.46,0.36-0.66,0.56c-0.2,0.2-0.3,0.36-0.3,0.49c0.01,0.33,0.28,1.51,2.35,3.33
+                          c2.06,1.81,3.06,2.32,3.15,2.36c0.1,0.04,0.18,0.05,0.24,0.05c0.13,0,0.29-0.1,0.49-0.3c0.2-0.2,0.86-1.12,1.08-1.32
+                          c0.21-0.2,0.39-0.3,0.53-0.3c0.1,0,0.2,0.02,0.3,0.07c0.1,0.05,3.21,1.87,3.27,1.93C24.08,20.8,23.97,21.31,23.85,21.6z"/>
+                      </g>
+                    </g>
+                  </svg>
+                  <span>Lets talk</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -63,17 +87,6 @@ title: Home
     </div>
   </div>
 
-  <div class="panel" id="connect">
-    <div class="alignment">
-      <div class="grid-container">
-        <div class="grid-x grid-margin-x">
-          <div class="cell large-7 small-10 small-offset-1 xxlarge-offset-0">
-            <h2 class="heading">Ready to partner?</h2>
-            <p class="subheading">Learn more about how our marketing services can drive your business forward.</p>
-            <a class="caret-anchor" href="/calendly">Let's talk</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {%- include connect.html -%}
+
 </div>
