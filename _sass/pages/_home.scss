@@ -26,6 +26,10 @@
 
     .talk-anchor {
       margin-left: 3em;
+
+      @include breakpoint(small) {
+        margin-left: 0 !important;
+      }
     }
   }
 
