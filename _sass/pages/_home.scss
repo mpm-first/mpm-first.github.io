@@ -3,6 +3,13 @@
   #landing {
     margin-top: 0;
 
+    .menu li {
+
+      @include breakpoint(small only) {
+        width: 100%;
+      }
+    }
+
     .talk-anchor,
     .video-anchor {
       display: inline-block;
@@ -25,10 +32,10 @@
     }
 
     .talk-anchor {
-      margin-left: 3em;
+      margin-left: 0;
 
-      @include breakpoint(small only) {
-        margin-left: 0 !important;
+      @include breakpoint(medium up) {
+        margin-left: 3em;
       }
     }
   }
