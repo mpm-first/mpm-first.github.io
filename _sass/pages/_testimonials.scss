@@ -1,0 +1,35 @@
+#testimonials {
+
+  #landing {
+    @include breakpoint(xlarge down) {
+      padding-top: 0;
+    }
+  }
+
+  .byline {
+    margin-top: 3rem;
+
+    .thumbnail {
+      width: 96px;
+      border: 0 none;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .name {
+      font-family: $header-font-family;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+
+    .title {
+      font-style: italic;
+    }
+  }
+}
