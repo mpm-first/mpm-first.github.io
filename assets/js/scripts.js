@@ -32,7 +32,7 @@ jQuery(function($) {
     else if (scrolled < til_footer && has_class)
       return $body.removeClass('bottom');
   }
-  $win.on('scroll', burger);
+  $win.on('scroll.burger', burger);
 
   //
   // Video player
@@ -50,5 +50,46 @@ jQuery(function($) {
       player.play();
     });
   }
+
+  //
+  // Clients scroll
+  //
+  var $work = $('#work');
+  var $slider_wrapper = $('.slider-wrapper', $work);
+  var $slider = $('.slider', $slider_wrapper);
+  var work_offset;
+  var work_threshold;
+
+  function clients_scroll(event) {
+
+    var distance = $win.scrollTop();
+    var left_scroll = distance - work_offset;
+        left_scroll = (left_scroll > 0) ? left_scroll : 0;
+        left_scroll = (left_scroll <= $slider_wrapper.width()) ? left_scroll : $win.width();
+
+    if (distance >= work_offset && distance < work_threshold) {
+      $slider_wrapper.removeClass('docked').addClass('fixed');
+      return $slider.css('left', '-' + left_scroll + 'px');
+    }
+
+    if (distance >= work_threshold) {
+      $slider_wrapper.removeClass('fixed').addClass('docked');
+      return $slider.css('left', '-' + left_scroll + 'px');
+    }
+
+    if ($slider_wrapper.hasClass('fixed') || $slider_wrapper.hasClass('docked'))
+      $slider_wrapper.removeClass('fixed').removeClass('docked');
+      return $slider.css('left', '0px');
+  }
+
+  function clients_values() {
+    work_offset = $work.offset().top;
+    work_threshold = work_offset + $work.height() - $win.height();
+  }
+
+  $win.on('scroll.clients', clients_scroll);
+  $win.on('resize.clients', clients_values);
+  clients_values();
+
 
 });
