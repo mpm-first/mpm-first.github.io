@@ -46,22 +46,32 @@
 
   #work {
     width: 100vw;
-    height: 200vw;
+    height: 100vh;
     position: relative;
     text-align: center;
 
-    .clients-label {
-      position: absolute;
-      top: 15%;
-      left: 50%;
-      z-index: 1;
-      display: inline-block;
-      @include transform(translateX(-50%));
-      padding: 4px 12px;
-      // text-transform: uppercase;
-      font-style: italic;
-      font-weight: bold;
-      background: #fff;
+    &.panels-1 {
+      .slider { width: 100vw; }
+    }
+
+    &.panels-2 {
+      height: 200vw;
+      .slider { width: 200vw; }
+    }
+
+    &.panels-3 { 
+      height: 300vw;
+      .slider { width: 300vw; }
+    }
+
+    &.panels-4 { 
+      height: 400vw;
+      .slider { width: 400vw; }
+    }
+
+    &.panels-5 { 
+      height: 500vw;
+      .slider { width: 500vw; }
     }
 
     .slider-wrapper {
@@ -87,7 +97,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 200vw;
         height: 100vh;
         margin: 0;
         padding: 0;
@@ -121,20 +130,35 @@
       }
     }
 
-    // &:before {
-    //   content: "";
-    //   display: none;
-    //   width: 100%;
-    //   height: 50%;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: 999;
-    //   // background: linear-gradient(180deg, rgba(16,179,209,0.1) 0%, rgba(16,179,209,0) 100%);
-    //   @include breakpoint(medium down) {
-    //     display: block;
-    //   }
-    // }
+    &.is-mobile {
+
+      .slider-wrapper { overflow: visible; }
+      .panel { display: block !important; }
+      .slider {
+        width: 100vw;
+        height: auto;
+        position: relative;
+      }
+      &.panels-1 { height: 100vh; }
+      &.panels-2 { height: 200vh; }
+      &.panels-3 { height: 300vh; }
+      &.panels-4 { height: 400vh; }
+      &.panels-5 { height: 500vh; }
+    }
+
+    .clients-label {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      z-index: 1;
+      display: inline-block;
+      @include transform(translateX(-50%));
+      padding: 4px 12px;
+      // text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      background: #fff;
+    }
 
     .subheading {
       max-width: 100%;

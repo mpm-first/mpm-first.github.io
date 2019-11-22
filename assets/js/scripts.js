@@ -54,18 +54,28 @@ jQuery(function($) {
   //
   // Clients scroll
   //
+  var work_offset;
+  var work_threshold;
+  var is_mobile = false;
   var $work = $('#work');
   var $slider_wrapper = $('.slider-wrapper', $work);
   var $slider = $('.slider', $slider_wrapper);
-  var work_offset;
-  var work_threshold;
+  var $panels = $('.panel', $slider);
+
+  $work.addClass('has-panels panels-'+$panels.length);
 
   function clients_scroll(event) {
 
+    if (is_mobile || $work.hasClass('panels-1')) {
+      return $slider_wrapper.removeClass('fixed').removeClass('docked');
+    }
+
     var distance = $win.scrollTop();
+
+    var max_scroll = ($panels.length - 1) * $win.width();
     var left_scroll = distance - work_offset;
         left_scroll = (left_scroll > 0) ? left_scroll : 0;
-        left_scroll = (left_scroll <= $slider_wrapper.width()) ? left_scroll : $win.width();
+        left_scroll = (left_scroll <= max_scroll) ? left_scroll : max_scroll;
 
     if (distance >= work_offset && distance < work_threshold) {
       $slider_wrapper.removeClass('docked').addClass('fixed');
@@ -77,14 +87,23 @@ jQuery(function($) {
       return $slider.css('left', '-' + left_scroll + 'px');
     }
 
-    if ($slider_wrapper.hasClass('fixed') || $slider_wrapper.hasClass('docked'))
+    if ($slider_wrapper.hasClass('fixed') || $slider_wrapper.hasClass('docked')) {
       $slider_wrapper.removeClass('fixed').removeClass('docked');
       return $slider.css('left', '0px');
+    }
   }
 
   function clients_values() {
+    is_mobile = $win.width() < 1280;
     work_offset = $work.offset().top;
     work_threshold = work_offset + $work.height() - $win.height();
+
+    if (is_mobile) {
+      $work.addClass('is-mobile');
+      $slider.css('left', '0');
+    } else {
+      $work.removeClass('is-mobile');
+    }
   }
 
   $win.on('scroll.clients', clients_scroll);
