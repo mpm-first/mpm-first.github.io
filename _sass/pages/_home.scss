@@ -45,10 +45,26 @@
   }
 
   #work {
+    margin-top: 1px;
     width: 100vw;
     height: 100vh;
     position: relative;
     text-align: center;
+
+    .trigger {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 2vw;
+      z-index: 111;
+      padding: 2vw;
+      @include transform(translateY(-50%));
+
+      &.next {
+        left: auto;
+        right: 2vw;
+      }
+    }
 
     &.panels-1 {
       .slider { width: 100vw; }

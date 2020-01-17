@@ -8,7 +8,7 @@ body {
 
 .panel {
   position: relative;
-  height: auto;
+  height: 100vh;
 
   @include breakpoint(xxlarge up) {
     min-height: 100vh;
