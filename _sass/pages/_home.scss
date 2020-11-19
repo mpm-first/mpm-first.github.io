@@ -31,16 +31,17 @@
       }
     }
 
-    .talk-anchor {
-      margin-left: 0;
+    .video-anchor {
+      margin-right: 0;
 
       @include breakpoint(medium up) {
-        margin-left: 3em;
+        margin-right: 2em;
       }
     }
   }
 
-  #video {
+  #our-video,
+  #surgical-reel {
     display: none;
   }
 
@@ -88,6 +89,46 @@
     &.panels-5 { 
       height: 500vw;
       .slider { width: 500vw; }
+    }
+
+    &.panels-6 {
+      height: 600vw;
+      .slider { width: 600vw; }
+    }
+
+    &.panels-7 {
+      height: 700vw;
+      .slider { width: 700vw; }
+    }
+
+    &.panels-8 { 
+      height: 800vw;
+      .slider { width: 800vw; }
+    }
+
+    &.panels-9 { 
+      height: 900vw;
+      .slider { width: 900vw; }
+    }
+
+    &.panels-10 { 
+      height: 1000vw;
+      .slider { width: 1000vw; }
+    }
+
+    &.panels-11 { 
+      height: 1100vw;
+      .slider { width: 1100vw; }
+    }
+
+    &.panels-12 { 
+      height: 1200vw;
+      .slider { width: 1200vw; }
+    }
+
+    &.panels-13 { 
+      height: 1300vw;
+      .slider { width: 1300vw; }
     }
 
     .slider-wrapper {
@@ -140,9 +181,6 @@
             }
           }
         }
-
-        #ascyrus { background-image: url('../img/clients/ascyrus/homepage-bg.jpg'); }
-        #kenkar { background-image: url('../img/clients/kenkar/homepage-bg.jpg'); }
       }
     }
 
@@ -160,6 +198,13 @@
       &.panels-3 { height: 300vh; }
       &.panels-4 { height: 400vh; }
       &.panels-5 { height: 500vh; }
+      &.panels-6 { height: 600vh; }
+      &.panels-7 { height: 700vh; }
+      &.panels-8 { height: 800vh; }
+      &.panels-9 { height: 900vh; }
+      &.panels-10 { height: 1000vh; }
+      &.panels-11 { height: 1100vh; }
+      &.panels-12 { height: 1200vh; }
     }
 
     .clients-label {

@@ -8,20 +8,28 @@ title: Home
       <div class="grid-container">
         <div class="grid-x grid-margin-x">
           <div class="cell large-7 small-10 small-offset-1 xxlarge-offset-0">
-            <h2 class="heading">Medtech solutions for an evolving digital world</h2>
+            <h2 class="heading">Comprehensive solutions for an evolving digital world</h2>
           </div>
           <div class="cell large-6 small-9 small-offset-1 xxlarge-offset-0">
             <p class="subheading">We provide digital marketing solutions that help achieve your business goals.</p>
             <ul class="menu simple">
               <li>
-                <a class="video-anchor" href="#video">
+                <a class="video-anchor" href="#our-video">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32">
                     <path fill-rule="evenodd"  fill="rgb(96, 187, 70)" d="M16.000,32.000 C7.164,32.000 0.000,24.837 0.000,16.000 C0.000,7.163 7.164,-0.000 16.000,-0.000 C24.836,-0.000 32.000,7.163 32.000,16.000 C32.000,24.837 24.836,32.000 16.000,32.000 ZM11.958,9.031 L11.958,22.972 L24.032,16.001 L11.958,9.031 Z"/>
                   </svg>
-                  <span>Watch our video</span>
+                  <span>Our video</span>
                 </a>
               </li>
-              <li">
+              <li>
+                <a class="video-anchor" href="#surgical-reel">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32">
+                    <path fill-rule="evenodd"  fill="rgb(0, 179, 208)" d="M16.000,32.000 C7.164,32.000 0.000,24.837 0.000,16.000 C0.000,7.163 7.164,-0.000 16.000,-0.000 C24.836,-0.000 32.000,7.163 32.000,16.000 C32.000,24.837 24.836,32.000 16.000,32.000 ZM11.958,9.031 L11.958,22.972 L24.032,16.001 L11.958,9.031 Z"/>
+                  </svg>
+                  <span>Surgical reel</span>
+                </a>
+              </li>
+              <li>
                 <a class="talk-anchor" href="#talk" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/michael-499/introductory-call-in'});return false;">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32">
                     <style type="text/css">
@@ -48,18 +56,37 @@ title: Home
     </div>
   </div>
   
-  <div class="panel" id="video">
+  <div class="panel video-panel" id="our-video">
     <div class="alignment">
       <div class="grid-container">
         <div class="grid-x grid-margin-x">
           <div class="cell large-12">
-            <div class="plyr__video-embed" id="player">
-                <iframe
-                    src="https://www.youtube.com/embed/6yyQm2LX0xo?modestbranding=1&amp;origin=https://mpmfirst.com&amp;iv_load_policy=3&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                    allowfullscreen
-                    allowtransparency
-                    allow="autoplay"
-                ></iframe>
+            <div class="plyr__video-embed player" id="our-video-player">
+              <iframe
+                src="https://www.youtube.com/embed/6yyQm2LX0xo?modestbranding=1&amp;origin=https://mpmfirst.com&amp;iv_load_policy=3&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel video-panel" id="surgical-reel">
+    <div class="alignment">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="cell large-12">
+            <div class="plyr__video-embed player" id="surgical-reel-player">
+              <iframe
+                src="https://www.youtube.com/embed/B08-FGIK9Qc?modestbranding=1&amp;origin=https://mpmfirst.com&amp;iv_load_policy=3&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay">
+              </iframe>
             </div>
           </div>
         </div>
@@ -81,7 +108,7 @@ title: Home
       </a>
 
       <div class="slider">
-        <div class="panel" id="ascyrus">
+        <div class="panel" id="ascyrus" style="background-image: url(assets/img/clients/ascyrus/homepage-bg.jpg);">
           <div class="alignment">
             <div class="grid-container">
               <div class="grid-x grid-margin-x">
@@ -94,7 +121,7 @@ title: Home
             </div>
           </div>
         </div>
-        <div class="panel" id="kenkar">
+        <div class="panel" id="kenkar" style="background-image: url(assets/img/clients/kenkar/homepage-bg.jpg);">
           <div class="alignment">
             <div class="grid-container">
               <div class="grid-x grid-margin-x">
@@ -102,6 +129,32 @@ title: Home
                   <h2 class="heading">KenKar</h2>
                   <p class="subheading">Kenkar LLC tasked MPM with creating a custom-built, multi-lingual website, new logo, and updated look-and-feel for their brand.</p>
                   <a href="/work/kenkar" class="caret-anchor">See the case study</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel" id="medsplained" style="background-image: url(assets/img/clients/medsplained/homepage-bg.jpg);">
+          <div class="alignment">
+            <div class="grid-container">
+              <div class="grid-x grid-margin-x">
+                <div class="cell large-6 large-offset-3 medium-8 medium-offset-2 small-10 small-offset-1">
+                  <h2 class="heading">Medsplained</h2>
+                  <p class="subheading">Medsplained tasked MPM with creating a custom-built, multi-lingual website, new logo, and updated look-and-feel for their brand.</p>
+                  <a href="/work/medsplained" class="caret-anchor">See the case study</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel" id="michelle-claulette" style="background-image: url(assets/img/clients/michelle-claulette/homepage-bg.jpg);">
+          <div class="alignment">
+            <div class="grid-container">
+              <div class="grid-x grid-margin-x">
+                <div class="cell large-6 large-offset-3 medium-8 medium-offset-2 small-10 small-offset-1">
+                  <h2 class="heading">Michelle Claulette</h2>
+                  <p class="subheading">Michelle Claulette tasked MPM with creating a custom-built, multi-lingual website, new logo, and updated look-and-feel for their brand.</p>
+                  <a href="/work/michelle-claulette" class="caret-anchor">See the case study</a>
                 </div>
               </div>
             </div>

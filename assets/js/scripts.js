@@ -38,7 +38,7 @@ jQuery(function($) {
   // var $work = $('#home #work');
   // var $panels = $('.panel', $work);
 
-  // $('.trigger').on('click', function(event) {
+  // $('#home .trigger').on('click', function(event) {
 
   //   event.preventDefault();
 
@@ -57,17 +57,45 @@ jQuery(function($) {
   //
   // Video player
   //
-  if (!!$('#player').length) {
+  if (!!$('#home .player').length) {
+
     var player_config = {
       controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+      autoplay: true,
       debug: true
     };
-    var player = new Plyr('#player', player_config);
-    var $video_anchor = $('#home .video-anchor');
+
+    /* TODO - build this object on DOM ready */
+    var players = {
+      'our-video': null,
+      'surgical-reel': null
+    };
     
-    $video_anchor.on('click.home', function(event) {
-      $('#video').show();
-      player.play();
+    $('#home .video-anchor').on('click.home', function(event) {
+
+      // This anchor relates to the keys in `players` with the `#`
+      var href = $(this).attr('href');
+
+      // Loop over keys in our `players` object to open any new players and close old ones
+      // This allows us to have any number of videos
+      for (key in players) {
+
+        // If current key in iteration is related to the video anchor clicked
+        if (key === href.substring(1)) {
+
+          // If there isn't a player object set yet for the key, instantiate one
+          if (!players[key]) players[key] = new Plyr(href+'-player', player_config);
+
+          // Start the video and show this player
+          players[key].play();
+          $(href).show()
+
+        // Stop and close all other players
+        } else if (players[key]) {
+          players[key].stop();
+          $('#'+key).hide();
+        }
+      }
     });
   }
 
@@ -95,6 +123,7 @@ jQuery(function($) {
     var distance = $win.scrollTop();
 
     var max_scroll = ($panels.length - 1) * $win.width();
+
     var left_scroll = distance - work_offset;
         left_scroll = (left_scroll > 0) ? left_scroll : 0;
         left_scroll = (left_scroll <= max_scroll) ? left_scroll : max_scroll;
@@ -128,11 +157,10 @@ jQuery(function($) {
     }
   }
 
+  // Bind all of this only on the Homepage
   if (!!$('#home').length) {
     $win.on('scroll.clients', clients_scroll);
     $win.on('resize.clients', clients_values);
     clients_values();
   }
-
-
 });

@@ -79,6 +79,7 @@ body {
 }
 
 #connect {
+  min-height: 0 !important;
   background-color: $primary-color;
 
   h2, p {
