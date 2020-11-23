@@ -16,6 +16,7 @@
     .menu li {
 
       @include breakpoint(small only) {
+        margin-left: 0;
         width: 100%;
       }
     }
