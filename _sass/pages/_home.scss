@@ -63,20 +63,20 @@
     position: relative;
     text-align: center;
 
-    .trigger {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 2vw;
-      z-index: 111;
-      padding: 2vw;
-      @include transform(translateY(-50%));
+    // .trigger {
+    //   display: none;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 2vw;
+    //   z-index: 111;
+    //   padding: 2vw;
+    //   @include transform(translateY(-50%));
 
-      &.next {
-        left: auto;
-        right: 2vw;
-      }
-    }
+    //   &.next {
+    //     left: auto;
+    //     right: 2vw;
+    //   }
+    // }
 
     &.panels-1 {
       .slider { width: 100vw; }
@@ -195,15 +195,24 @@
       }
     }
 
-    &.is-mobile {
+    @include breakpoint(medium down) {
 
-      .slider-wrapper { overflow: visible; }
-      .panel { display: block !important; }
+      .slider-wrapper {
+        overflow: visible;
+        position: relative !important;
+      }
+
+      .panel {
+        display: block !important;
+        position: relative;
+      }
+
       .slider {
         width: 100vw;
         height: auto;
         position: relative;
       }
+      
       &.panels-1 { height: 100vh; }
       &.panels-2 { height: 200vh; }
       &.panels-3 { height: 300vh; }
@@ -217,6 +226,37 @@
       &.panels-11 { height: 1100vh; }
       &.panels-12 { height: 1200vh; }
     }
+
+    // &.is-mobile {
+
+    //   .slider-wrapper {
+    //     overflow: visible;
+    //     position: relative !important;
+    //   }
+
+    //   .panel {
+    //     display: block !important;
+    //     position: relative;
+    //   }
+
+    //   .slider {
+    //     width: 100vw;
+    //     height: auto;
+    //     position: relative;
+    //   }
+    //   &.panels-1 { height: 100vh; }
+    //   &.panels-2 { height: 200vh; }
+    //   &.panels-3 { height: 300vh; }
+    //   &.panels-4 { height: 400vh; }
+    //   &.panels-5 { height: 500vh; }
+    //   &.panels-6 { height: 600vh; }
+    //   &.panels-7 { height: 700vh; }
+    //   &.panels-8 { height: 800vh; }
+    //   &.panels-9 { height: 900vh; }
+    //   &.panels-10 { height: 1000vh; }
+    //   &.panels-11 { height: 1100vh; }
+    //   &.panels-12 { height: 1200vh; }
+    // }
 
     .clients-label {
       position: absolute;
