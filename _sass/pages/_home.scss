@@ -3,6 +3,16 @@
   #landing {
     margin-top: 0;
 
+    video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: .3;
+    }
+
     .menu li {
 
       @include breakpoint(small only) {
