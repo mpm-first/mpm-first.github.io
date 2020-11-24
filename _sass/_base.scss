@@ -40,6 +40,10 @@ body {
 
 #landing {
   margin-top: 20vh;
+
+  @include breakpoint(medium down) {
+    margin-top: 0;
+  }
 }
 
 .heading {
