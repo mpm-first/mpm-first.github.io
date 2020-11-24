@@ -11,6 +11,10 @@
       top: 0;
       left: 0;
       opacity: .3;
+
+      @include breakpoint(large down) {
+        display: none;
+      }
     }
 
     .menu li {
@@ -54,6 +58,11 @@
   #our-video,
   #surgical-reel {
     display: none;
+
+    @include breakpoint(large down) {
+      min-height: auto;
+      height: auto;
+    }
   }
 
   #work {
@@ -195,39 +204,8 @@
       }
     }
 
-    // @include breakpoint(large down) {
-
-    //   .slider-wrapper {
-    //     overflow: visible;
-    //     position: relative !important;
-    //   }
-
-    //   .panel {
-    //     display: block !important;
-    //     position: relative;
-    //   }
-
-    //   .slider {
-    //     width: 100vw;
-    //     height: auto;
-    //     position: relative;
-    //   }
-
-    //   &.panels-1 { height: 100vh; }
-    //   &.panels-2 { height: 200vh; }
-    //   &.panels-3 { height: 300vh; }
-    //   &.panels-4 { height: 400vh; }
-    //   &.panels-5 { height: 500vh; }
-    //   &.panels-6 { height: 600vh; }
-    //   &.panels-7 { height: 700vh; }
-    //   &.panels-8 { height: 800vh; }
-    //   &.panels-9 { height: 900vh; }
-    //   &.panels-10 { height: 1000vh; }
-    //   &.panels-11 { height: 1100vh; }
-    //   &.panels-12 { height: 1200vh; }
-    // }
-
     &.is-mobile {
+      position: relative !important;
 
       .slider-wrapper {
         overflow: visible;
@@ -236,14 +214,15 @@
 
       .panel {
         display: block !important;
-        position: relative;
+        position: relative !important;
       }
 
       .slider {
         width: 100vw;
         height: auto;
-        position: relative;
+        position: relative !important;
       }
+
       &.panels-1 { height: 100vh; }
       &.panels-2 { height: 200vh; }
       &.panels-3 { height: 300vh; }
