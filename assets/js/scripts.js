@@ -95,8 +95,9 @@ jQuery(function($) {
   function clients_scroll(event) {
 
     if (is_mobile || $work.hasClass('panels-1')) {
+      console.log('is mobile');
       $slider_wrapper.removeClass('fixed').removeClass('docked');
-      return;
+      return true;
     }
 
     clients_values();
