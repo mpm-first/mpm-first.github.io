@@ -34,26 +34,6 @@ jQuery(function($) {
   }
   $win.on('scroll.burger', burger);
 
-  // var num = 0;
-  // var $work = $('#home #work');
-  // var $panels = $('.panel', $work);
-
-  // $('#home .trigger').on('click', function(event) {
-
-  //   event.preventDefault();
-
-  //   var $t = $(this);
-  //   var offset = $work.offset().top;
-
-  //   if ($t.hasClass('next')) {
-  //     num = (num + 1 > $panels.length - 1) ? $panels.length - 1 : num + 1;
-  //     window.scrollTo(0, offset + ($win.width() * num));
-  //   } else {
-  //     num = (num - 1 < 0) ? 0 : num - 1;
-  //     window.scrollTo(0, offset + ($win.width() * num));
-  //   }
-  // });
-
   //
   // Video player
   //
@@ -115,7 +95,8 @@ jQuery(function($) {
   function clients_scroll(event) {
 
     if (is_mobile || $work.hasClass('panels-1')) {
-      return $slider_wrapper.removeClass('fixed').removeClass('docked');
+      $slider_wrapper.removeClass('fixed').removeClass('docked');
+      return;
     }
 
     clients_values();
@@ -163,4 +144,9 @@ jQuery(function($) {
     $win.on('resize.clients', clients_values);
     clients_values();
   }
+
+  //
+  // Replace video background on home with still image
+  //
+
 });
