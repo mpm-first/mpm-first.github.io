@@ -3,6 +3,25 @@
   #landing {
     margin-top: 0;
 
+    @include breakpoint(large down) {
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .3;
+        z-index: -1;
+        background-image: url('/assets/img/home-canopy-mobile.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+    }
+
     video {
       object-fit: cover;
       width: 100vw;
@@ -158,16 +177,28 @@
       height: 100vh;
       overflow: hidden;
 
+      @include breakpoint(large down) {
+        overflow: visible;
+      }
+
       &.fixed {
         position: fixed;
         top: 0;
         left: 0;
+
+        @include breakpoint(large down) {
+          position: relative;
+        }
       }
 
       &.docked {
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @include breakpoint(large down) {
+          position: relative;
+        }
       }
 
       .slider {
@@ -178,6 +209,10 @@
         margin: 0;
         padding: 0;
         // background: red;
+
+        @include breakpoint(large down) {
+          position: relative;
+        }
 
         .panel {
           width: 100vw;

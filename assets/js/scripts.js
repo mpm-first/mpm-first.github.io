@@ -133,7 +133,7 @@ jQuery(function($) {
 
     if (is_mobile) {
       $work.addClass('is-mobile');
-      $slider.css('left', '0');
+      $slider.css('left', 'auto');
     } else {
       $work.removeClass('is-mobile');
     }
