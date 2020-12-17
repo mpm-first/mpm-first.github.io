@@ -177,28 +177,16 @@
       height: 100vh;
       overflow: hidden;
 
-      @include breakpoint(large down) {
-        overflow: visible;
-      }
-
       &.fixed {
         position: fixed;
         top: 0;
         left: 0;
-
-        @include breakpoint(large down) {
-          position: relative;
-        }
       }
 
       &.docked {
         position: absolute;
         bottom: 0;
         left: 0;
-
-        @include breakpoint(large down) {
-          position: relative;
-        }
       }
 
       .slider {
@@ -209,10 +197,6 @@
         margin: 0;
         padding: 0;
         // background: red;
-
-        @include breakpoint(large down) {
-          position: relative;
-        }
 
         .panel {
           width: 100vw;
@@ -245,6 +229,17 @@
       .slider-wrapper {
         overflow: visible;
         position: relative !important;
+        height: auto;
+
+        &.docked {
+          left: auto;
+          top: auto;
+        }
+
+        &.docked {
+          left: auto;
+          bottom: auto;
+        }
       }
 
       .panel {
