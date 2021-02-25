@@ -5,20 +5,20 @@
 
     @include breakpoint(large down) {
 
-      &:after {
-        content: "";
-        display: block;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: .3;
-        z-index: -1;
-        background-image: url('/assets/img/home-canopy-mobile.jpg');
-        background-size: cover;
-        background-position: center center;
-      }
+      // &:after {
+      //   content: "";
+      //   display: block;
+      //   width: 100vw;
+      //   height: 100vh;
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   opacity: .3;
+      //   z-index: -1;
+      //   background-image: url('/assets/img/home-canopy-mobile.jpg');
+      //   background-size: cover;
+      //   background-position: center center;
+      // }
     }
 
     video {
